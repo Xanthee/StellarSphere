@@ -12,6 +12,7 @@
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.48",
     "@gsap/react": "^2.1.2",
+    "@splinetool/react-spline": "^4.0.0",
     "framer-motion": "^12.9.4",
     "gsap": "^3.13.0",
     "locomotive-scroll": "^4.1.4",
