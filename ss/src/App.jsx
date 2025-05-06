@@ -3,20 +3,28 @@ import VenusCarousel from './components/VenusCarousel';
 import StarCarousel from './components/StarCarousel';
 import Spline from '@splinetool/react-spline';
 import Logo from './assets/Logo.png'
+import BGImage from './assets/BackGroundImg.png'
 
 const Example = () => {
   return (
     <div className="bg-black">
-      <div className="flex h-screen flex-col">
-        <nav className=" p-4 flex justify-between items-center">
+      <div className="flex h-screen flex-col"
+          style={{
+            backgroundImage: `url(${BGImage})`,
+            backgroundSize: 'cover', // Adjusts image to cover the entire div
+            backgroundPosition: 'center', // Centers the image
+            backgroundRepeat: 'no-repeat', // Prevents image from repeating
+          }}
+      >
+        <nav className=" p-8 flex justify-between items-center">
          <div>
             <img
               src={Logo}
               alt="Logo"
-              className="h-24 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </div>
-          <div className="flex space-x-4">
+          <div className="flex text-4xl space-x-4">
             <button className="font-orbitron font-black text-white">
               Button A
             </button>
