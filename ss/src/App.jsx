@@ -16,7 +16,7 @@ const Example = () => {
             backgroundRepeat: 'no-repeat', // Prevents image from repeating
           }}
       >
-      <div classname="bg-black-900 h-screen w-screen"></div>
+
         <nav className=" p-8 flex justify-between items-center">
          <div>
             <img
