@@ -13,11 +13,13 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[500vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
-          {[...Array(5)].map((_, i) => (
-            <div key={i} className="bg-blue-900 text-4xl h-[100px] w-[100px]">
-              <h1>hello</h1>
-            </div>
-          ))}
+          <div className="flex flex-row justify-around">
+            <div className="w-[3000px] bg-blue-900 text-6xl">hello</div>
+            <div className="w-[3000px] bg-red-900 text-6xl">hello</div>
+            <div className="w-[3000px] bg-green-900 text-6xl">hello</div>
+            <div className="w-[3000px] bg-yellow-900 text-6xl">hello</div>
+            <div className="w-[3000px] bg-orange-900 text-6xl">hello</div>
+          </div>
         </motion.div>
       </div>
     </section>
