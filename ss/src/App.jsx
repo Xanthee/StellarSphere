@@ -25,7 +25,7 @@ const Example = () => {
               className="h-16 w-auto object-contain"
             />
           </div>
-          <div className="flex text-4xl space-x-4">
+          <nav className="flex text-4xl space-x-4 z-10">
             <button className="font-orbitron font-black text-white">
               Button A
             </button>
@@ -35,7 +35,7 @@ const Example = () => {
             <button className="font-orbitron font-black text-white ">
               Button C
             </button>
-          </div>
+          </nav>
         </nav>
         <div className="relative flex-1">
           <div className="absolute inset-0 w-full h-full">
