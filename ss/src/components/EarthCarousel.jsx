@@ -56,6 +56,31 @@ const HorizontalScrollCarousel = () => {
                 </p>
               </div>
               {/* Earth info C */}
+              <div className="absolute bottom-1/3 left-[150vw] flex flex-row w-[70vw] items-center">
+                <motion.div style={{ y: yEarthB }}>
+                  <img src={Earth} className="h-[300px] w-[300px]" />
+                </motion.div>
+              </div>
+              <motion.div
+                className="absolute bottom-[3/4] left-[145vw] transform w-[200px] h-[400px]"
+                style={{ y: yMoon }}
+              >
+                <Spline scene="https://prod.spline.design/LzhVNa1synAwhP-C/scene.splinecode" />
+              </motion.div>
+              <div className="card absolute left-[100vw] ml-12 flex flex-col">
+                <h1 className="text-white text-xl">
+                  4 billion years ago
+                </h1>
+                <p className="text-white text-m">
+                  The surface was still extremely hot, with volcanic activity, molten rock, and frequent asteroid impacts.
+                </p>
+              </div>
+              {/* Earth info D */}
+              <div className="absolute bottom-[20vh] left-[270vw] flex flex-row w-[70vw] items-center">
+                <motion.div style={{ y: yEarthB }}>
+                    <img src={Earth} className="h-[800px] w-[800px]" />
+                </motion.div>
+              </div>
             </div>
           </div>
         </motion.div>
