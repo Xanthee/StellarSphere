@@ -8,7 +8,6 @@ const HorizontalScrollCarousel = () => {
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-200%"]);
-
   return (
     <section ref={targetRef} className="relative h-[500vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">

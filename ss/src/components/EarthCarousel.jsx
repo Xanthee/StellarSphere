@@ -1,26 +1,21 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
-import Earth from '../assets/4BEarth.png';
 import ParticleBackground from './ParticleBackground';
-import './style.css';
 import Spline from '@splinetool/react-spline';
-
-
+import './style.css';
+import Earth from '../assets/4BEarth.png';
 
 const HorizontalScrollCarousel = () => {
-const targetRef = useRef(null);
-const { scrollYProgress } = useScroll({ target: targetRef });
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: targetRef });
 
-const x = useTransform(scrollYProgress, [0, 1], ['0%', '-66.66%']);
-const yEarth = useTransform(scrollYProgress, [0, 1], [0, 200]); 
-const yEarthB = useTransform(scrollYProgress, [0, 1], [0, 150]);  
-const yMoon = useTransform(scrollYProgress, [0, 1], [0, -300]);  
-
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-66.66%']);
+  const yEarth = useTransform(scrollYProgress, [0, 1], [0, 200]); 
+  const yEarthB = useTransform(scrollYProgress, [0, 1], [0, 150]);  
+  const yMoon = useTransform(scrollYProgress, [0, 1], [0, -300]);  
   return (
-
     <section ref={targetRef} className="relative h-[200vh] bg-black-900">
       <ParticleBackground/>
-
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex w-[300vw] flex-col items-center">
           {/* Carousel Items */}
