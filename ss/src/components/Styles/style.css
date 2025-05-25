@@ -1,0 +1,127 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 302deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 100px;
+  --card-width: 400px;
+}
+
+.card {
+  background:rgb(32, 20, 18);
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  width: 102%;
+  height: 107%;
+  border-radius: 3px;
+  background-image: linear-gradient(
+    var(--rotate)
+    ,rgb(255, 134, 93),rgb(227, 127, 60) 43%,rgb(194, 81, 0));
+    position: absolute;
+    z-index: -1;
+    top: -3%;
+    left: -1%;
+    animation: spin 5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 100);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(1);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    ,rgb(245, 166, 135),rgb(227, 113, 60) 43%,rgb(194, 74, 0));
+    opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.shiny-text {
+  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+
+#root, body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.canvas-container {
+  height: 200vh; /* this should match your ScrollControls.pages setting */
+}
+
+@keyframes floatA {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatB {
+  0%   { transform: translateY(-20px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+.floatingA {
+  animation: floatA 5s ease-in-out infinite;
+}
+
+.floatingB {
+  animation: floatB 5s ease-in-out infinite;
+}

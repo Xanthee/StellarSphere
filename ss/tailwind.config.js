@@ -14,6 +14,7 @@ export default {
         },
         fontFamily: {
           orbitron: ['"Orbitron"', 'sans-serif'],
+          mono: ['"Fira Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
         },
       },
     },

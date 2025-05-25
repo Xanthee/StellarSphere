@@ -1,14 +1,16 @@
 import EarthCarousel from './components/EarthCarousel';
-import VenusCarousel from './components/VenusCarousel';
+import SaturnCarousel from './components/SaturnCarousel';
 import StarCarousel from './components/StarCarousel';
+import ParticleBackground from './components/ParticleBackground';
 import Spline from '@splinetool/react-spline';
 import Logo from './assets/Logo.png'
+import ScrambledText from "./components/Styles/ScrambledText.jsx";
 import BGImage from './assets/BackGroundImg.png'
 import { useEffect, useState } from 'react';
 
 
 
-const Example = () => {
+const App = () => {
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
@@ -26,13 +28,9 @@ const Example = () => {
   return (
     <div className="bg-black">
       <div className="flex h-screen flex-col"
-          style={{
-            backgroundImage: `url(${BGImage})`,
-            backgroundSize: 'cover', // Adjusts image to cover the entire div
-            backgroundPosition: 'center', // Centers the image
-            backgroundRepeat: 'no-repeat', // Prevents image from repeating
-          }}
+      
       >
+              <ParticleBackground/>
       <nav
         className={`transform transition-transform duration-[3000ms] ease-in-out ${
           showNav ? 'translate-y-0' : '-translate-y-full'
@@ -61,12 +59,16 @@ const Example = () => {
         </div>
       </div>
       <EarthCarousel />
-      <div className="flex h-48 h-screen items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
+      <div className="flex h-[100vh] items-center justify-center">
+        <div className="relative flex-1">
+          <Spline scene="https://prod.spline.design/QoVOa4-ULSebN3cV/scene.splinecode" />
+          <ScrambledText
+            className="absolute top-[70vh] left-1/2 -translate-x-1/2 font-orbitron text-6xl font-extrabold uppercase text-white opacity-60 z-10 drop-shadow-[0px_0px_34px_rgba(223,209,255,1)] "
+            text="Explore more planets"
+          />
+        </div>
       </div>
-      <VenusCarousel />
+      <SaturnCarousel />
       <div className="flex h-48 h-screen items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll up
@@ -77,5 +79,5 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default App;
 
