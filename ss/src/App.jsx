@@ -7,6 +7,8 @@ import Logo from './assets/Logo.png'
 import ScrambledText from "./components/Styles/ScrambledText.jsx";
 import BGImage from './assets/BackGroundImg.png'
 import { useEffect, useState } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 
@@ -24,6 +26,20 @@ const App = () => {
     // Trigger animation on mount
     setTimeout(() => setShowTitle(true), 300); // small delay to sync with nav
   }, []);
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [inView, controls]);
 
   return (
     <div className="bg-black">
@@ -44,7 +60,12 @@ const App = () => {
           <button className="text-white">Button C</button>
         </div>
       </nav>
-        <div className="relative flex-1">
+        <motion.div 
+          ref={ref}
+          animate={controls}
+          initial={{ opacity: 0, y: 50 }}
+          ransition={{ duration: 0.6, ease: "easeOut" }}className="relative flex-1"
+        >
           <div className="absolute inset-0 w-full h-full">
             <Spline scene="https://prod.spline.design/6yf5VWqCg3DxPGtL/scene.splinecode" />
           </div>
@@ -56,7 +77,7 @@ const App = () => {
             >
               Stellar Sphere
             </span>
-        </div>
+        </motion.div>
       </div>
       <EarthCarousel />
       <div className="flex h-[100vh] items-center justify-center">
