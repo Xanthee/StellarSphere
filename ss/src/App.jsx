@@ -2,6 +2,7 @@ import EarthCarousel from './components/EarthCarousel';
 import SaturnCarousel from './components/SaturnCarousel';
 import StarCarousel from './components/StarCarousel';
 import ParticleBackground from './components/ParticleBackground';
+import PlanetCarousel from './components/PlanetCarousel';
 import Spline from '@splinetool/react-spline';
 import Logo from './assets/Logo.png'
 import ScrambledText from "./components/Styles/ScrambledText.jsx";
@@ -81,15 +82,20 @@ const App = () => {
       </div>
       <EarthCarousel />
       <div className="flex h-[100vh] items-center justify-center">
-        <div className="relative flex-1">
+        <div className="relative flex-1 flex items-center justify-center">
           <Spline scene="https://prod.spline.design/QoVOa4-ULSebN3cV/scene.splinecode" />
           <ScrambledText
             className="absolute top-[70vh] left-1/2 -translate-x-1/2 font-orbitron text-6xl font-extrabold uppercase text-white opacity-60 z-10 drop-shadow-[0px_0px_34px_rgba(223,209,255,1)] "
-            text="Explore more planets"
+            text="Explore Beyond"
           />
+          <ScrambledText
+            className="absolute top-[80vh] left-1/2 -translate-x-1/2 font-mono text-xl text-white z-10 "
+            text="Discover the wonders of space, from distant stars to the mysteries of the planets."
+          />
+          <button className="text-white font-mono absolute top-[90vh] z-10 rounded-full border border-white bg-transparent text-white px-4 py-2 hover:bg-white hover:text-black transition">View the Universe</button>
         </div>
       </div>
-      <SaturnCarousel />
+      <PlanetCarousel />
       <div className="flex h-48 h-screen items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll up
