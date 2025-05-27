@@ -1,31 +1,33 @@
+// PLUGINS
+import { useEffect, useState } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Spline from '@splinetool/react-spline';
+
+// COMPONENTS
 import EarthCarousel from './components/EarthCarousel';
 import SaturnCarousel from './components/SaturnCarousel';
 import StarCarousel from './components/StarCarousel';
 import ParticleBackground from './components/ParticleBackground';
 import PlanetCarousel from './components/PlanetCarousel';
-import Spline from '@splinetool/react-spline';
+import SpaceAudio from "./components/SpaceAudio";
 import Logo from './assets/Logo.png'
 import ScrambledText from "./components/Styles/ScrambledText.jsx";
 import BGImage from './assets/BackGroundImg.png'
-import { useEffect, useState } from 'react';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
 
 
 const App = () => {
+  {/* ON VIEW EASE IN AND OUT ANIMATION */}
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
-    // Trigger the animation on mount
     setShowNav(true);
   }, []);
 
   const [showTitle, setShowTitle] = useState(false);
 
   useEffect(() => {
-    // Trigger animation on mount
-    setTimeout(() => setShowTitle(true), 300); // small delay to sync with nav
+    setTimeout(() => setShowTitle(true), 300); //delay on purpose
   }, []);
 
   const controls = useAnimation();
@@ -43,24 +45,29 @@ const App = () => {
   }, [inView, controls]);
 
   return (
-    <div className="bg-black">
-      <div className="flex h-screen flex-col"
-      
-      >
-              <ParticleBackground/>
-      <nav
-        className={`transform transition-transform duration-[3000ms] ease-in-out ${
-          showNav ? 'translate-y-0' : '-translate-y-full'
-        } sticky top-0 z-50 p-6 flex justify-between items-center
-          bg-white/10 backdrop-blur-md shadow-lg rounded-2xl`}
-      >
-        <div className="text-white text-2xl">Logo</div>
-        <div className="flex text-4xl space-x-4 z-10">
-          <button className="text-white">Button A</button>
-          <button className="text-white">Button B</button>
-          <button className="text-white">Button C</button>
-        </div>
-      </nav>
+    <div className="bg-black m-0 p-0">
+      <SpaceAudio />
+      <ParticleBackground/>
+
+      {/* INTRO PANEL */}
+      <div className="flex h-screen flex-col">
+
+        {/* NAV BAR */}
+        <nav
+          className= 
+            {`transform transition-transform duration-[3000ms] ease-in-out 
+            ${ showNav ? 'translate-y-0' : '-translate-y-full' } 
+            sticky top-0 z-50 p-6 flex justify-between items-center
+            bg-white/10 backdrop-blur-md shadow-lg rounded-2xl`}
+        >
+          <div>Logo</div>
+          <div className="flex text-4xl text-white space-x-4 z-10">
+            <button>Earth</button>
+            <button>Planets</button>
+            <button>Stars</button>
+          </div>
+        </nav>
+
         <motion.div 
           ref={ref}
           animate={controls}
@@ -80,8 +87,11 @@ const App = () => {
             </span>
         </motion.div>
       </div>
+      
       <EarthCarousel />
-      <div className="flex h-[100vh] items-center justify-center">
+
+      {/* SECONDARY PANEL */}
+      <div className="h-[100vh] m-0 p-0">
         <div className="relative flex-1 flex items-center justify-center">
           <Spline scene="https://prod.spline.design/QoVOa4-ULSebN3cV/scene.splinecode" />
           <ScrambledText
@@ -95,12 +105,16 @@ const App = () => {
           <button className="text-white font-mono absolute top-[90vh] z-10 rounded-full border border-white bg-transparent text-white px-4 py-2 hover:bg-white hover:text-black transition">View the Universe</button>
         </div>
       </div>
+
       <PlanetCarousel />
+
+      {/* THIRD PANEL */}
       <div className="flex h-48 h-screen items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll up
         </span>
       </div>
+
       <StarCarousel />
     </div>
   );
