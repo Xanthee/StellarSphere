@@ -61,7 +61,7 @@ const App = () => {
             bg-white/10 backdrop-blur-md shadow-lg rounded-2xl`}
         >
           <div>Logo</div>
-          <div className="flex text-4xl text-white space-x-4 z-10">
+          <div className="flex text-4xl font-orbitron text-white space-x-4 z-10">
             <button>Earth</button>
             <button>Planets</button>
             <button>Stars</button>

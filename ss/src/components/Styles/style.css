@@ -118,10 +118,10 @@
   100% { transform: translateY(-20px); }
 }
 
-.floatingA {
+.floatingUp {
   animation: floatA 5s ease-in-out infinite;
 }
 
-.floatingB {
+.floatingDown {
   animation: floatB 5s ease-in-out infinite;
 }

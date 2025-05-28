@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Saturn } from './Saturn';
+import { Saturn } from './models/Saturn';
 import { Starfield } from './Starfield';
 
 export default function SaturnCarousel() {

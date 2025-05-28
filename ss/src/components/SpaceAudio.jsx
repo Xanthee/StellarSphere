@@ -6,7 +6,7 @@ const SpaceAudio = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 0.3; // adjust volume if needed
+      audio.volume = 0.9; // volume
       const play = () => {
         audio.play().catch((err) => {
           console.warn("Autoplay may be blocked until user interacts:", err.message);
@@ -15,7 +15,6 @@ const SpaceAudio = () => {
 
       play();
 
-      // Optional: re-attempt playback after user clicks anywhere
       const onInteraction = () => {
         play();
         window.removeEventListener("click", onInteraction);
