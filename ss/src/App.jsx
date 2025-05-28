@@ -87,7 +87,7 @@ const App = () => {
             </span>
         </motion.div>
       </div>
-      
+
       <EarthCarousel />
 
       {/* SECONDARY PANEL */}

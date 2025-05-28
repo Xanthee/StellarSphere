@@ -3,11 +3,10 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = () => {
-  useEffect(() => {
+
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     });
-  }, []);
 
   const options = useMemo(
     () => ({
