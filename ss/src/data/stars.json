@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Sun",
+    "description": "The star at the center of our solar system.",
+    "splineScene": "https://prod.spline.design/z0rGD4JAtsze2NVS/scene.splinecode"
+  },
+  {
+    "name": "Sirius",
+    "description": "The brightest star in the Earth's night sky.",
+    "splineScene": "https://prod.spline.design/z0rGD4JAtsze2NVS/scene.splinecode"
+  },
+  {
+    "name": "Betelgeuse",
+    "description": "A red supergiant in the constellation Orion.",
+    "splineScene": "https://prod.spline.design/z0rGD4JAtsze2NVS/scene.splinecode"
+
+  }
+]

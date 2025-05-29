@@ -10,6 +10,7 @@ import SaturnCarousel from './components/SaturnCarousel';
 import StarCarousel from './components/StarCarousel';
 import ParticleBackground from './components/ParticleBackground';
 import PlanetCarousel from './components/PlanetCarousel';
+import StarPanel from '@/components/StarCarousel/StarPanel';
 import SpaceAudio from "./components/SpaceAudio";
 import Logo from './assets/Logo.png'
 import ScrambledText from "./components/Styles/ScrambledText.jsx";
@@ -116,6 +117,18 @@ const App = () => {
       </div>
 
       <StarCarousel />
+
+      
+      {/* FOURTH PANEL */}
+      <div className="flex h-48 h-screen items-center justify-center">
+        <span className="font-semibold uppercase text-neutral-500">
+          Scroll up
+        </span>
+      </div>
+              
+      <div className="w-full h-screen">
+        <StarPanel />
+      </div>
     </div>
   );
 };
