@@ -91,7 +91,7 @@ const ParticleBackground = () => {
     []
   );
 
-  return <Particles id="tsparticles" options={options} className="absolute inset-0 h-[900vh] w-full z-0"/>;
+  return <Particles id="tsparticles" options={options} className="absolute inset-0 h-[800vh] w-full z-0"/>;
 };
 
 export default ParticleBackground;

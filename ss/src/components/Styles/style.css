@@ -5,15 +5,15 @@
 }
 
 :root {
-  --card-height: 100px;
+  --card-height: 400px;
   --card-width: 400px;
 }
 
 .card {
-  background:rgb(32, 20, 18);
+  background:rgb(35, 38, 41);
   width: var(--card-width);
   height: var(--card-height);
-  padding: 3px;
+  padding: 15px;
   position: relative;
   border-radius: 3px;
   justify-content: center;
@@ -26,16 +26,16 @@
 
 .card::before {
   content: "";
-  width: 102%;
-  height: 107%;
+  width: 104%;
+  height: 105%;
   border-radius: 3px;
   background-image: linear-gradient(
     var(--rotate)
-    ,rgb(255, 134, 93),rgb(227, 127, 60) 43%,rgb(194, 81, 0));
+    ,rgb(203, 208, 216),rgb(97, 135, 192) 43%,rgb(203, 208, 216), rgb(73, 96, 133));
     position: absolute;
     z-index: -1;
-    top: -3%;
-    left: -1%;
+    top: -2%;
+    left: -2%;
     animation: spin 5s linear infinite;
 }
 
@@ -53,7 +53,7 @@
   filter: blur(calc(var(--card-height) / 6));
   background-image: linear-gradient(
     var(--rotate)
-    ,rgb(245, 166, 135),rgb(227, 113, 60) 43%,rgb(194, 74, 0));
+    ,rgb(203, 208, 216),rgb(126, 155, 201) 43%,rgb(203, 208, 216),rgb(78, 107, 153));
     opacity: 1;
   transition: opacity 0.5s;
   animation: spin 3s linear infinite;

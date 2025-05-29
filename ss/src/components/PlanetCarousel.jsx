@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { planets } from "../data/planets";
 import ShinyText from './Styles/ShinyText.jsx';
+import './Styles/style.css';
 
 const PlanetCarousel = () => {
   // Keep track of which planet is shown on screen
@@ -66,7 +67,7 @@ const PlanetCarousel = () => {
           transition={{ duration: 0.4 }}
           className="flex flex-col items-center text-center space-y-4 z-10"
         >
-          <img src={planet.image} alt={planet.name} className="w-96 h-[500px] object-contain" />
+          <img src={planet.image} alt={planet.name} className="w-96 h-[500px] object-contain floatingUp" />
           <h2 className="text-7xl font-bold font-orbitron drop-shadow-[0px_0px_24px_rgba(223,209,255,1)]">
           {planet.name}
           </h2>

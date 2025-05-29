@@ -6,8 +6,7 @@ import Spline from '@splinetool/react-spline';
 
 // COMPONENTS
 import EarthCarousel from './components/EarthCarousel';
-import SaturnCarousel from './components/SaturnCarousel';
-import StarCarousel from './components/StarCarousel';
+import DwarfPlanetCarousel from './components/DwarfPlanetCarousel.jsx';
 import ParticleBackground from './components/ParticleBackground';
 import PlanetCarousel from './components/PlanetCarousel';
 import StarPanel from '@/components/StarCarousel/StarPanel';
@@ -116,17 +115,9 @@ const App = () => {
         </span>
       </div>
 
-      <StarCarousel />
+      <DwarfPlanetCarousel />
 
-      
-      {/* FOURTH PANEL */}
-      <div className="flex h-48 h-screen items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
-      </div>
-              
-      <div className="w-full h-screen">
+      <div className="w-full h-screen bg-transparent">
         <StarPanel />
       </div>
     </div>
