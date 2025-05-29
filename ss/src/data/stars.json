@@ -1,18 +1,21 @@
 [
   {
-    "name": "Sun",
-    "description": "The star at the center of our solar system.",
+    "name": "Kepler 10b",
+    "type": "G-type main-sequence star.",
+    "description": "Kepler-10b was the smallest transiting exoplanet known at the time of discovery and the first definitively rocky exoplanet identified by Kepler, distinguishing it from earlier candidates like CoRoT-7b, which had more uncertain compositions.",
+    "splineScene": "https://prod.spline.design/C1XcGWd8An1gsgcK/scene.splinecode"
+  },
+  {
+    "name": "Corot 7B",
+    "type": "G9V main-sequence star.",
+    "description": "CoRoT-7b was one of the first super-Earths confirmed to be rocky, predating Kepler-10b (which you asked about earlier). Its discovery marked a milestone in exoplanet research, demonstrating the ability to detect small, terrestrial worlds.",
     "splineScene": "https://prod.spline.design/z0rGD4JAtsze2NVS/scene.splinecode"
   },
   {
-    "name": "Sirius",
-    "description": "The brightest star in the Earth's night sky.",
-    "splineScene": "https://prod.spline.design/z0rGD4JAtsze2NVS/scene.splinecode"
-  },
-  {
-    "name": "Betelgeuse",
-    "description": "A red supergiant in the constellation Orion.",
-    "splineScene": "https://prod.spline.design/z0rGD4JAtsze2NVS/scene.splinecode"
+    "name": "Ankaa (Alpha Phoenicis)",
+    "type": "Orange giant star (spectral type K0.5IIIb).",
+    "description": "Ankaa is a spectroscopic binary system, meaning it consists of two stars orbiting each other with a period of about 10.5 years. The primary star is an evolved giant, and the companion is not directly observable but detected through spectral shifts.",
+    "splineScene": "https://prod.spline.design/5eERWMSfj3h2hDTT/scene.splinecode"
 
   }
 ]

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import StarCard from "./StarCard";
 import starData from "@/data/stars.json";
+import '../Styles/style.css';
+
 
 export default function StarCarousel({ onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,9 +17,9 @@ export default function StarCarousel({ onBack }) {
     <div className="w-full h-screen flex items-center justify-center relative">
       <button
         onClick={onBack}
-        className="absolute top-6 left-6 bg-white text-black px-4 py-2 rounded-lg z-10"
+        className="absolute top-6 left-6 text-6xl text-white m-10 z-10 transition-transform duration-300 hover:scale-150"
       >
-        ← Back
+        ←
       </button>
 
       <div className="flex items-center gap-8 transition-all duration-700 ease-in-out">
