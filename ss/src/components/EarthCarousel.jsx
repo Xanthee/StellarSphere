@@ -9,7 +9,7 @@ import './Styles/style.css';
 import Spline from '@splinetool/react-spline';
 import Earth from '../assets/4BEarth.png';
 
-const EarthCarousel = () => {
+const EarthCarousel = ({ id }) => {
 
   // Tracking scroll progress
   const targetRef = useRef(null);
@@ -17,14 +17,16 @@ const EarthCarousel = () => {
   // Using Framer plugin to track horizontal scroll progress
   const { scrollYProgress } = useScroll({ target: targetRef });
 
+  // Carousel Width
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-30.66%']);
+
   // Scroll based animations 
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-30.66%']); //Move up when scroll
   const yEarthDown = useTransform(scrollYProgress, [0, 1], [0, 200]); 
   const yEarthUp = useTransform(scrollYProgress, [0, 1], [0, -150]);  
   const yMoon = useTransform(scrollYProgress, [0, 1], [0, -200]);  
 
   return (
-    <section ref={targetRef} className="relative h-[150vh] bg-black-900">
+    <section id={id} ref={targetRef} className="relative h-[150vh] bg-black-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
 
         {/* MAIN CAROUSEL CONTENT */}

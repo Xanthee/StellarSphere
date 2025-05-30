@@ -5,6 +5,7 @@ import '../Styles/style.css';
 
 
 export default function StarCarousel({ onBack }) {
+  // Manage through dataset (stars.json) 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goTo = (index) => {
@@ -14,6 +15,7 @@ export default function StarCarousel({ onBack }) {
   };
 
   return (
+    // BACK BUTTON
     <div className="w-full h-screen flex items-center justify-center relative">
       <button
         onClick={onBack}
@@ -22,6 +24,7 @@ export default function StarCarousel({ onBack }) {
         ←
       </button>
 
+      {/* CAROUSEL CONTENT */}
       <div className="flex items-center gap-8 transition-all duration-700 ease-in-out">
         {starData.map((star, index) => {
           const isActive = index === currentIndex;

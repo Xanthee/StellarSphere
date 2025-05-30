@@ -48,10 +48,8 @@ const App = () => {
     <div className="bg-black m-0 p-0">
       <SpaceAudio />
       <ParticleBackground/>
-
-      {/* INTRO PANEL */}
+      {/* MAIN CONTENT */}
       <div className="flex h-screen flex-col">
-
         {/* NAV BAR */}
         <nav
           className= 
@@ -60,14 +58,19 @@ const App = () => {
             sticky top-0 z-50 p-6 flex justify-between items-center
             bg-white/10 backdrop-blur-md shadow-lg rounded-2xl`}
         >
-          <div>Logo</div>
-          <div className="flex text-4xl font-orbitron text-white space-x-4 z-10">
-            <button>Earth</button>
-            <button>Planets</button>
-            <button>Stars</button>
+          <img
+            src={Logo}
+            className="h-12 w-auto object-contain"
+          />
+          <div className="flex text-4xl font-orbitron text-white space-x-16 z-10">
+            <a href="#earth" className="hover:underline">Earth</a>
+            <a href="#planets" className="hover:underline">Planets</a>
+            <a href="#dwarfs" className="hover:underline">Dwarf Planets</a>
+            <a href="#stars" className="hover:underline">Stars</a>
           </div>
         </nav>
 
+      {/* INTRO PANEL */}
         <motion.div 
           ref={ref}
           animate={controls}
@@ -88,7 +91,7 @@ const App = () => {
         </motion.div>
       </div>
 
-      <EarthCarousel />
+      <EarthCarousel id="earth" />
 
       {/* SECONDARY PANEL */}
       <div className="h-[100vh] m-0 p-0">
@@ -102,23 +105,39 @@ const App = () => {
             className="absolute top-[80vh] left-1/2 -translate-x-1/2 font-mono text-xl text-white z-10 "
             text="Discover the wonders of space, from distant stars to the mysteries of the planets."
           />
-          <button className="text-white font-mono absolute top-[90vh] z-10 rounded-full border border-white bg-transparent text-white px-4 py-2 hover:bg-white hover:text-black transition">View the Universe</button>
+          <a href="#planets" className="text-white font-mono absolute top-[90vh] z-10 rounded-full border border-white bg-transparent text-white px-4 py-2 hover:bg-white hover:text-black transition">View the Universe</a>
         </div>
       </div>
 
-      <PlanetCarousel />
+      <PlanetCarousel id="planets" />
 
       {/* THIRD PANEL */}
-      <div className="flex h-48 h-screen items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
+      <div className="h-[100vh] m-0 p-0">
+        <div className="relative flex-1 flex items-right justify-center">
+           <Spline scene="https://prod.spline.design/H6HoWib3rDBuDTRd/scene.splinecode" />
+          <div className="absolute top-[50vh] right-20 z-10 flex flex-col text-right space-y-4 max-w-md">
+            <ScrambledText
+              className="font-orbitron text-6xl font-extrabold uppercase text-white drop-shadow-[0px_0px_34px_rgba(223,209,255,1)]"
+              text="Venture further"
+            />
+            <ScrambledText
+              className="font-mono text-xl text-white"
+              text="Probe the depths of our solar system and the stars beyond"
+            />
+            <a
+              href="#stars"
+              className="text-white w-[190px] self-end font-mono inline-block rounded-full border border-white bg-transparent px-4 py-2 hover:bg-white hover:text-black transition"
+            >
+              Explore the Stars
+            </a>
+          </div>
+        </div>
       </div>
 
-      <DwarfPlanetCarousel />
+      <DwarfPlanetCarousel id="dwarfs" />
 
       <div className="w-full h-screen bg-transparent">
-        <StarPanel />
+        <StarPanel id="stars" />
       </div>
     </div>
   );

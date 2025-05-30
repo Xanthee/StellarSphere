@@ -5,7 +5,7 @@ import Spline from '@splinetool/react-spline';
 import './Styles/style.css';
 import Earth from '../assets/4BEarth.png';
 
-const StarCarousel = () => {
+const DwarfCarousel  = ({ id }) => {
 
   // Tracking scroll progress
   const targetRef = useRef(null);
@@ -13,12 +13,11 @@ const StarCarousel = () => {
   // Using Framer plugin to track horizontal scroll progress
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-    // Scroll based animations 
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-28%']);
-  const yStar = useTransform(scrollYProgress, [0, 1], [0, -20]); 
+  // Carousel width
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-25%']); 
 
   return ( 
-    <section ref={targetRef} className="relative h-[150vh]">
+    <section id={id} ref={targetRef} className="relative h-[150vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex flex-col items-center">
           
@@ -72,4 +71,4 @@ const StarCarousel = () => {
   );
 };
 
-export default StarCarousel;
+export default DwarfCarousel;

@@ -3,6 +3,7 @@ import '../Styles/style.css';
 
 export default function StarCard({ data, isActive }) {
   return (
+    // CARD CONTENT
     <div className="flex flex-col items-center text-center">
       <div className="w-[500px] h-[500px] rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
         <Spline scene={data.splineScene} />

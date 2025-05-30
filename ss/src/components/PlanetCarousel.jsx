@@ -4,7 +4,7 @@ import { planets } from "../data/planets";
 import ShinyText from './Styles/ShinyText.jsx';
 import './Styles/style.css';
 
-const PlanetCarousel = () => {
+const PlanetCarousel  = ({ id }) => {
   // Keep track of which planet is shown on screen
   const [index, setIndex] = useState(0);
 
@@ -27,7 +27,7 @@ const PlanetCarousel = () => {
   };
 
   return (
-    <div className="w-screen h-screen text-white flex flex-col items-center justify-center relative overflow-hidden">
+    <section id={id} className="w-screen h-screen text-white flex flex-col items-center justify-center relative overflow-hidden">
 
       {/* TITLE SECTION */}
       <div className="text-5xl font-bold uppercase font-orbitron absolute top-20">
@@ -117,7 +117,7 @@ const PlanetCarousel = () => {
           NEXT →
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
