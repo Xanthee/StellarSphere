@@ -1,4 +1,13 @@
-import SunImage from '../assets/4BEarth.png';
+import Earth from '../assets/Earth.png';
+import Mars from '../assets/Mars.png';
+import Uranus from '../assets/Mars.png';
+import Mercury from '../assets/Uranus.png';
+import Saturn from '../assets/Saturn.png';
+import Neptune from '../assets/Neptune.png';
+import Venus from '../assets/Venus.png';
+import Jupiter from '../assets/Jupiter.png';
+import Sun from '../assets/Sun.png';
+
 
 export const planets = [
   {
@@ -7,7 +16,7 @@ export const planets = [
     age: "4.5 billion years",
     type: "Yellow Dwarf",
     temperature: "5,500°C",
-    image: SunImage,
+    image: Sun,
   },
   {
     name: "Mercury",
@@ -15,7 +24,7 @@ export const planets = [
     age: "4.5 billion years",
     type: "Terrestrial",
     temperature: "430°C",
-    image: SunImage,
+    image: Mercury,
   },
   {
     name: "Venus",
@@ -23,7 +32,7 @@ export const planets = [
     age: "4.6 billion years",
     type: "Terrestrial",
     temperature: "464°C",
-    image: SunImage,
+    image: Venus,
   },
   {
     name: "Mars",
@@ -31,7 +40,7 @@ export const planets = [
     age: "4.6 billion years",
     type: "Terrestrial",
     temperature: "-65°C",
-    image: SunImage,
+    image: Mars,
   },
   {
     name: "Jupiter",
@@ -39,7 +48,7 @@ export const planets = [
     age: "4.6 billion years",
     type: "Gas Giant",
     temperature: "-110°C",
-    image: SunImage,
+    image: Jupiter,
   },
   {
     name: "Saturn",
@@ -47,7 +56,7 @@ export const planets = [
     age: "4.6 billion years",
     type: "Gas Giant",
     temperature: "-140°C",
-    image: SunImage,
+    image: Saturn,
   },
   {
     name: "Uranus",
@@ -55,7 +64,7 @@ export const planets = [
     age: "4.6 billion years",
     type: "Ice Giant",
     temperature: "-195°C",
-    image: SunImage,
+    image: Uranus,
   },
   {
     name: "Neptune",
@@ -63,6 +72,6 @@ export const planets = [
     age: "4.6 billion years",
     type: "Ice Giant",
     temperature: "-200°C",
-    image: SunImage,
+    image: Neptune,
   }
 ];

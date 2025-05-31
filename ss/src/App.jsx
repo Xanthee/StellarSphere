@@ -13,7 +13,7 @@ import StarPanel from '@/components/StarCarousel/StarPanel';
 import SpaceAudio from "./components/SpaceAudio";
 import Logo from './assets/Logo.png'
 import ScrambledText from "./components/Styles/ScrambledText.jsx";
-import BGImage from './assets/BackGroundImg.png'
+import ShinyText from "./components/Styles/ShinyText.jsx";
 
 
 const App = () => {
@@ -75,19 +75,27 @@ const App = () => {
           ref={ref}
           animate={controls}
           initial={{ opacity: 0, y: 50 }}
-          ransition={{ duration: 0.6, ease: "easeOut" }}className="relative flex-1"
+          ransition={{ duration: 0.6, ease: "easeOut" }}className="relative flex-1 flex justify-center"
         >
           <div className="absolute inset-0 w-full h-full">
             <Spline scene="https://prod.spline.design/6yf5VWqCg3DxPGtL/scene.splinecode" />
           </div>
+          <div className="flex flex-col items-center justify-center">
             <span
-              className={`absolute inset-0 font-orbitron text-8xl font-bold uppercase text-white flex pt-36 justify-center z-10 drop-shadow-[0px_0px_34px_rgba(223,209,255,1)]
+              className={`font-orbitron text-8xl font-bold uppercase text-white flex  items-center z-10 drop-shadow-[0px_0px_34px_rgba(223,209,255,1)]
                 transition-all duration-[3000ms] ease-out
                 ${showTitle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
               `}
             >
               Stellar Sphere
             </span>
+            <ShinyText 
+                className="font-orbitron text-3xl font-bold uppercase text-white flex pt-16 items-center justify-center z-10" 
+                text="Explore the universe" 
+                disabled={false} 
+                speed={3}
+            />
+          </div>
         </motion.div>
       </div>
 

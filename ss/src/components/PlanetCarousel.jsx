@@ -67,7 +67,7 @@ const PlanetCarousel  = ({ id }) => {
           transition={{ duration: 0.4 }}
           className="flex flex-col items-center text-center space-y-4 z-10"
         >
-          <img src={planet.image} alt={planet.name} className="w-96 h-[500px] object-contain floatingUp" />
+          <img src={planet.image} alt={planet.name} className="w-96 h-[600px] object-contain floatingUp" />
           <h2 className="text-7xl font-bold font-orbitron drop-shadow-[0px_0px_24px_rgba(223,209,255,1)]">
           {planet.name}
           </h2>
