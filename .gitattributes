@@ -1,2 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+In terminal, use:
+
+cd ss
+
+npm I
+
+npm run dev 
+
+will host it locally.
